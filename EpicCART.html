@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EpicCART</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <div id="d0">
+        <div id="d1">
+            <div id="d2">
+                <img src="Logo.jpg" width="150px" style="border-radius: 10px;">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products...">
+                <button>Search</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="EpicCART.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="mailto:contact@epiccart.com">Contact</a></li>
+                    <li><a href="Login.html">Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+<!-- for moving images -->
+<div id="slideshow">
+    <img src="a1.jpg" alt="Image 1" class="active">
+    <img src="a2.jpg" alt="Image 2">
+    <img src="a3.jpg" alt="Image 3">
+    <img src="a4.jpg" alt="Image 4">
+    <img src="a5.jpg" alt="Image 5">
+    <img src="a6.jpg" alt="Image 6">
+    <img src="a7.jpg" alt="Image 7">
+    <button class="arrow left-arrow" onclick="showPrevImage()">&#10094;</button>
+    <button class="arrow right-arrow" onclick="showNextImage()">&#10095;</button>
+</div>
+
+<script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('#slideshow img');
+    const totalImages = images.length;
+
+    function showImage(index) {
+        images[currentIndex].classList.remove('active');
+        currentIndex = index;
+        images[currentIndex].classList.add('active');
+    }
+
+    function showNextImage() {
+        const nextIndex = (currentIndex + 1) % totalImages;
+        showImage(nextIndex);
+    }
+
+    function showPrevImage() {
+        const prevIndex = (currentIndex - 1 + totalImages) % totalImages;
+        showImage(prevIndex);
+    }
+
+    setInterval(showNextImage, 3000); // Change image every 3 seconds
+</script>
+
+<!-- sbi card offer -->
+ <img src="sbi.jpg" alt="offer" width="100%">
+
+<!-- for adding product categories -->
+<h1 style="text-align: center;">Product Categories</h1>
+<div class="category-container">
+    <div class="category-tile">
+        <img src="c1.png" alt="Category 1">
+        <div class="category-title">Computer and Peripherals</div>
+        <a href="catg1.html" class="view-category">View Category</a>
+    </div>
+    <div class="category-tile">
+        <img src="c2.jpg" alt="Category 2">
+        <div class="category-title">Mobiles & Accessories</div>
+        <a href="catg2.html" class="view-category">View Category</a>
+    </div>
+    <div class="category-tile">
+        <img src="c3.png" alt="Category 3">
+        <div class="category-title">Musical Instruments</div>
+        <a href="catg3.html" class="view-category">View Category</a>
+    </div>
+</div>
+    <br>
+    <div class="category-container">
+    <div class="category-tile">
+        <img src="c4.webp" alt="Category 4">
+        <div class="category-title">TV & Home Entertainment</div>
+        <a href="catg4.html" class="view-category">View Category</a>
+    </div>
+    <div class="category-tile">
+        <img src="c5.jpg" alt="Category 5">
+        <div class="category-title">Office & Stationery</div>
+        <a href="catg5.html" class="view-category">View Category</a>
+    </div>
+    <div class="category-tile">
+        <img src="c6.webp" alt="Category 6">
+        <div class="category-title">Books</div>
+        <a href="catg6.html" class="view-category">View Category</a>
+    </div>
+
+</div>
+
+
+    <!-- footer -->
+    <footer style="background-color: #080808; padding: 20px; text-align: center;">
+        <div>
+            <a href="mailto:feedback@epiccart.com" style="margin: 0 15px;">Feedback</a><br><br>
+            <a style="margin: 0 15px;">Scan the QR code to Download Our App</a>
+        </div>
+        <div>
+            <img src="qr.png" alt="Download Our App QR Code" style="width: 100px; height: auto; margin-top: 10px;">
+            <img src="dwl.png" alt="Download Our App QR Code" style="width: 100px; height: 80px; margin-top: 9px; padding-left: 5px;">
+        </div>
+        <div style="margin-top: 15px;">
+            <a href="Privacy Policy.html" style="margin: 0 10px;">Privacy Policy</a>
+            <a href="Terms of Service.html" style="margin: 0 10px;">Terms of Service</a>
+        </div><br>
+        <div>
+            <p>&copy; 2024 EpicCART. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>

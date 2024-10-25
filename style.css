@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#d1 {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+.search-bar {
+    margin: 15px 0;
+    padding-left: 250px;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.search-bar button {
+    padding: 10px;
+    background: #35424a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.search-bar button:hover {
+    background: #45a049;
+}
+
+
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+p{
+    color: white;
+}
+#d0 {
+    background-color: rgb(85, 89, 92);
+    max-width: auto;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 25px;
+}
+
+
+/* for moving images */
+#slideshow {
+    max-width: auto;
+    margin: auto;
+    position: relative;
+}
+#slideshow img {
+    width: 100%;
+    display: none;
+}
+#slideshow img.active {
+    display: block;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.left-arrow {
+    left: 10px;
+}
+.right-arrow {
+    right: 10px;
+}
+
+/* for adding product categories */
+
+        .category-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+            gap: 20px;
+            align-items: center;
+            text-align: center;
+            padding-left: 150px;
+            padding-right: 150px;
+            background-color: rgb(231, 117, 71);
+            width: auto;
+        }
+        .category-tile {
+            background-color: rgb(121, 122, 163);
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: box-shadow 0.3s;
+            margin: 30px;
+            
+        }
+        .category-tile:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .category-tile img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .category-title {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .view-category {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .view-category:hover {
+            background-color: #0056b3;
+        }

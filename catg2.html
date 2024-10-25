@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EpicCART</title>
+    <link rel="stylesheet" href="catg.css">
+
+
+</head>
+<body>
+    <div id="d0">
+        <div id="d1">
+            <div id="d2">
+                <img src="Logo.jpg" width="150px">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products...">
+                <button>Search</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="EpicCART.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="mailto:contact@epiccart.com">Contact</a></li>
+                    <li><a href="Login.html">Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <img src="catg1/img1.webp" width="100%">
+
+    <!-- for moving images -->
+     <br>
+    <h1 style="text-align: center;">Flagship Deals</h1>
+    <br>
+<div id="slideshow">
+    <img src="catg1/s1.jpg" alt="Image 1" class="active">
+    <img src="catg1/s2.jpg" alt="Image 2">
+    <img src="catg1/s3.jpg" alt="Image 3">
+    <img src="catg1/s4.jpg" alt="Image 4">
+    <img src="catg1/s5.jpg" alt="Image 5">
+    <img src="catg1/s6.jpg" alt="Image 6">
+    <img src="catg1/s7.jpg" alt="Image 7">
+    <img src="catg1/s8.jpg" alt="Image 8">
+    <button class="arrow left-arrow" onclick="showPrevImage()">&#10094;</button>
+    <button class="arrow right-arrow" onclick="showNextImage()">&#10095;</button>
+</div>
+
+<script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('#slideshow img');
+    const totalImages = images.length;
+
+    function showImage(index) {
+        images[currentIndex].classList.remove('active');
+        currentIndex = index;
+        images[currentIndex].classList.add('active');
+    }
+
+    function showNextImage() {
+        const nextIndex = (currentIndex + 1) % totalImages;
+        showImage(nextIndex);
+    }
+
+    function showPrevImage() {
+        const prevIndex = (currentIndex - 1 + totalImages) % totalImages;
+        showImage(prevIndex);
+    }
+
+    setInterval(showNextImage, 3000); // Change image every 3 seconds
+</script>
+
+
+
+    <!-- Products -->
+
+    <main class="product-container">
+        <section class="product">
+            <img src="catg1/p1.webp" width="100%" alt="Product 1">
+            <h2>SAMSUNG Galaxy S24+ 5G (Cobalt Violet, 256 GB)  (12 GB RAM)</h2>
+            <p class="price">₹64,999</p>
+            <button class="add-to-cart"><a href="https://www.flipkart.com/samsung-galaxy-s24-5g-cobalt-violet-256-gb/p/itm46fc37ddc7255?pid=MOBGX2F3GDX7QYFT&lid=LSTMOBGX2F3GDX7QYFTDDMJ7Z&marketplace=FLIPKART&store=tyy%2F4io&srno=b_1_1&otracker=clp_bannerads_1_15.bannerAdCard.BANNERADS_Samsung%2BGalaxy%2BS24%2BPlus_mobile-phones-store_GCREI3MXON7T&fm=Search&iid=1e9d7e8b-d7f2-45fa-8f76-7c7939c61e27.MOBGX2F3GDX7QYFT.SEARCH&ppt=clp&ppn=mobile-phones-store&ssid=fnv8gwsrkg0000001729779165467"> Buy Now</a></button>
+        </section>
+        <section class="product" >
+            <img src="catg1/p2.jpeg" width="100%" alt="Product 1">
+            <h2>Motorola Edge 50 Fusion (Forest Green, 256 GB)  (12 GB RAM)</h2>
+            <p class="price">₹23,999</p>
+            <button class="add-to-cart"><a href="https://www.flipkart.com/motorola-edge-50-fusion-forest-green-256-gb/p/itm372843264e10a?pid=MOBHYVFV3RNAGXF6&lid=LSTMOBHYVFV3RNAGXF6A8TQA2&marketplace=FLIPKART&fm=neo%2Fmerchandising&iid=M_017f9818-e84f-48b2-8631-8b044844acab_33_AWE1529WOLK1_MC.MOBHYVFV3RNAGXF6&ppt=clp&ppn=mobile-phones-store&otracker=clp_pmu_v2_Motorola%2Bsmartphones_3_33.productCard.PMU_V2_Motorola%2BEdge%2B50%2BFusion%2B%2528Forest%2BGreen%252C%2B256%2BGB%2529_mobile-phones-store_MOBHYVFV3RNAGXF6_neo%2Fmerchandising_2&otracker1=clp_pmu_v2_PINNED_neo%2Fmerchandising_Motorola%2Bsmartphones_LIST_productCard_cc_3_NA_view-all&cid=MOBHYVFV3RNAGXF6">Buy Now</a></button>
+        </section>
+      <section class="product">
+            <img src="catg1/p3.jpeg" width="100%" alt="Product 1">
+            <h2>Apple iPhone 15 Pro Max (Natural Titanium, 256 GB)</h2>
+            <p class="price">₹1,23,999</p>
+            <button class="add-to-cart"><a href="https://www.flipkart.com/apple-iphone-15-pro-max-natural-titanium-256-gb/p/itm9d44960698192?pid=MOBGTAGQH6K7YMJU&lid=LSTMOBGTAGQH6K7YMJU74VM64&marketplace=FLIPKART&store=tyy%2F4io&srno=b_1_1&otracker=clp_bannerads_4_15.bannerAdCard.BANNERADS_HPW_mobile-phones-store_DU2EQYEFF6WY&fm=neo%2Fmerchandising&iid=a6551841-0175-45ba-8b52-257cbd40b7ca.MOBGTAGQH6K7YMJU.SEARCH&ppt=clp&ppn=mobile-phones-store&ssid=21iau07kf40000001729783600570">Buy Now</a></button>
+        </section>
+      <section class="product">
+            <img src="catg1/p4.jpeg" width="100%" alt="Product 1">
+            <h2>realme P2 Pro 5G (Parrot Green, 128 GB)  (8 GB RAM)</h2>
+            <p class="price">₹21,999</p>
+            <button class="add-to-cart"><a href="https://www.flipkart.com/realme-p2-pro-5g-parrot-green-128-gb/p/itm53d39fff9f20c?pid=MOBH45GSFFNCGSGR&lid=LSTMOBH45GSFFNCGSGROQOPEM&marketplace=FLIPKART&sattr[]=color&sattr[]=storage&sattr[]=ram&st=color&otracker=clp_banner_3_13.bannerX3.BANNER_mobile-phones-store_9AN2E433X8J5">Buy Now</a></button>
+        </section>
+        <section class="product">
+            <img src="catg1/p5.jpeg" width="100%" alt="Product 1">
+            <h2>Google Pixel 9 Pro XL (Porcelain, 256 GB)  (16 GB RAM)</h2>
+            <p class="price">₹1,24,999</p>
+            <button class="add-to-cart"><a href="https://www.flipkart.com/google-pixel-9-pro-xl-porcelain-256-gb/p/itm23d7e159c924d?pid=MOBH2HJGE33F8KHN&lid=LSTMOBH2HJGE33F8KHNQBQOW2&marketplace=FLIPKART&store=tyy%2F4io&srno=b_1_1&otracker=clp_bannerads_7_19.bannerAdCard.BANNERADS_Pixel%2B9%2BPro%2BXL_mobile-phones-store_0VLYIYX08D2N&fm=neo%2Fmerchandising&iid=bd880bae-8349-4128-a5a6-ffbfde870847.MOBH2HJGE33F8KHN.SEARCH&ppt=clp&ppn=mobile-phones-store&ssid=xg7e9anh7k0000001729784007467">Buy Now</a></button>
+        </section>
+        <section class="product">
+            <img src="catg1/p6.jpeg" width="100%" alt="Product 1">
+            <h2>Nothing Phone (2a) 5G (Blue, 128 GB)  (8 GB RAM)</h2>
+            <p class="price">₹21,999</p>
+            <button class="add-to-cart"><a href="https://www.flipkart.com/nothing-phone-2a-5g-blue-128-gb/p/itm85c6bca5edadc?pid=MOBHY8KMDGZNWH4G&lid=LSTMOBHY8KMDGZNWH4GPMEHQG&marketplace=FLIPKART&store=tyy%2F4io&srno=b_1_1&otracker=clp_bannerads_5_9.bannerAdCard.BANNERADS_Nothing%2BPhone%2B2a%2B5G_mobile-phones-store_5XV2SX4CLQ4F&fm=neo%2Fmerchandising&iid=8d530953-dbe9-4c77-b31a-5ece6e14ecd7.MOBHY8KMDGZNWH4G.SEARCH&ppt=clp&ppn=mobile-phones-store&ssid=09rei9vf280000001729784134138">Buy Now</a></button>
+        </section>
+    </main>
+
+    
+    <!-- footer -->
+    <footer style="background-color: #080808; padding: 20px; text-align: center;">
+        <div>
+            <a href="mailto:feedback@epiccart.com" style="margin: 0 15px;">Feedback</a><br><br>
+            <a style="margin: 0 15px;">Scan the QR code to Download Our App</a>
+        </div>
+        <div>
+            <img src="qr.png" alt="Download Our App QR Code" style="width: 100px; height: auto; margin-top: 10px;">
+            <img src="dwl.png" alt="Download Our App QR Code" style="width: 100px; height: 80px; margin-top: 9px; padding-left: 5px;">
+        </div>
+        <div style="margin-top: 15px;">
+            <a href="Privacy Policy.html" style="margin: 0 10px;">Privacy Policy</a>
+            <a href="Terms of Service.html" style="margin: 0 10px;">Terms of Service</a>
+        </div><br>
+        <div>
+            <p>&copy; 2024 EpicCART. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>

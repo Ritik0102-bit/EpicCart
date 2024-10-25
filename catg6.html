@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EpicCART</title>
+    <link rel="stylesheet" href="catg.css">
+    <style>
+        .product img {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div id="d0">
+        <div id="d1">
+            <div id="d2">
+                <img src="Logo.jpg" width="150px">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products...">
+                <button>Search</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="EpicCART.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="mailto:contact@epiccart.com">Contact</a></li>
+                    <li><a href="Login.html">Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <img src="catg6/img1.jpg" width="100%">
+    <img src="catg6/img2.jpg" width="100%">
+    
+
+    <!-- for moving images -->
+<div id="slideshow">
+    <img src="catg6/s1.jpg" alt="Image 1" class="active">
+    <img src="catg6/s2.jpg" alt="Image 2">
+    <button class="arrow left-arrow" onclick="showPrevImage()">&#10094;</button>
+    <button class="arrow right-arrow" onclick="showNextImage()">&#10095;</button>
+</div>
+
+<script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('#slideshow img');
+    const totalImages = images.length;
+
+    function showImage(index) {
+        images[currentIndex].classList.remove('active');
+        currentIndex = index;
+        images[currentIndex].classList.add('active');
+    }
+
+    function showNextImage() {
+        const nextIndex = (currentIndex + 1) % totalImages;
+        showImage(nextIndex);
+    }
+
+    function showPrevImage() {
+        const prevIndex = (currentIndex - 1 + totalImages) % totalImages;
+        showImage(prevIndex);
+    }
+
+    setInterval(showNextImage, 3000); // Change image every 3 seconds
+</script>
+
+    <img src="catg6/img3.jpg" width="100%">
+    <img src="catg6/img4.jpg" width="100%">
+
+    <!-- Products -->
+
+    <main class="product-container">
+        <section class="product">
+            <img src="catg6/p1.jpeg" width="100%" alt="Product 1">
+            <h2>Haunting Adeline + Hunting Adeline (Book 1 & 2 Combo)  (Paperback, H. D. Carlton)</h2>
+            <p class="price">₹499</p>
+            <button class="add-to-cart">Buy Now</button>
+        </section>
+        <section class="product" >
+            <img src="catg6/p2.jpeg" width="100%" alt="Product 1">
+            <h2>SSC GD BOOKS COMBO Maths, Samanya Hindi, Reasoning & Samanya Adhyan 2022  (Paperback, Hindi, Ankit Bhati Sir)</h2>
+            <p class="price">₹299</p>
+            <button class="add-to-cart">Buy Now</button>
+        </section>
+      <section class="product">
+            <img src="catg6/p3.jpeg" width="100%" alt="Product 1">
+            <h2>Magic Book  (Spiral, Others, children book, baby book, practice book)</h2>
+            <p class="price">₹299</p>
+            <button class="add-to-cart">Buy Now</button>
+        </section>
+      <section class="product">
+            <img src="catg6/p4.jpeg" width="100%" alt="Product 1">
+            <h2>Railway Samanya Vigyan 5000+ (????? ??????? ??????? 5000+) In Hindi | Aditya Ranjan Sir</h2>
+            <p class="price">₹199</p>
+            <button class="add-to-cart">Buy Now</button>
+        </section>
+        <section class="product">
+            <img src="catg6/p5.jpeg" width="100%" alt="Product 1">
+            <h2>Word Power Made Easy - Word Power  (English, Paperback, Lewis Norman)</h2>
+            <p class="price">₹199</p>
+            <button class="add-to-cart">Buy Now</button>
+        </section>
+        <section class="product">
+            <img src="catg6/p6.jpeg" width="100%" alt="Product 1">
+            <h2>Power of Your Subconscious Mind - The Subconscious Code : Cracking the Secrets Within  (English, Paperback, Murphy Joseph)</h2>
+            <p class="price">₹299</p>
+            <button class="add-to-cart">Buy Now</button>
+        </section>
+    </main>
+
+    
+    <!-- footer -->
+    <footer style="background-color: #080808; padding: 20px; text-align: center;">
+        <div>
+            <a href="mailto:feedback@epiccart.com" style="margin: 0 15px;">Feedback</a><br><br>
+            <a style="margin: 0 15px;">Scan the QR code to Download Our App</a>
+        </div>
+        <div>
+            <img src="qr.png" alt="Download Our App QR Code" style="width: 100px; height: auto; margin-top: 10px;">
+            <img src="dwl.png" alt="Download Our App QR Code" style="width: 100px; height: 80px; margin-top: 9px; padding-left: 5px;">
+        </div>
+        <div style="margin-top: 15px;">
+            <a href="Privacy Policy.html" style="margin: 0 10px;">Privacy Policy</a>
+            <a href="Terms of Service.html" style="margin: 0 10px;">Terms of Service</a>
+        </div><br>
+        <div>
+            <p>&copy; 2024 EpicCART. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>

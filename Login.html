@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(270deg, #6a11cb, #ced1d6);
+        }
+        .container {
+            width: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+        h2 { text-align: center; }
+        .group { margin-bottom: 15px; }
+        .label { display: block; margin-bottom: 5px; }
+        .input {
+            width: 94%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .button {
+            width: 100%;
+            padding: 15px;
+            background: #2575fc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .toggle-link { text-align: center; margin-top: 15px; }
+        .toggle-link a {text-decoration: none; color: #ffff;}
+        .close { position: absolute; top: 10px; right: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="login" class="form active">
+            <span class="close" onclick="toggleForms()">&times;</span>
+            <form id="login-form">
+                <h2>Log In</h2>
+                <div class="group">
+                    <label class="label">Email</label>
+                    <input type="email" placeholder="Write your email" class="input" required>
+                </div>
+                <div class="group">
+                    <label class="label">Password</label>
+                    <input type="password" placeholder="Enter your password" class="input" required>
+                </div>
+                <div class="toggle-link">Don't have an account? <a href="#" onclick="toggleForms()">Sign up</a></div>
+                <button type="submit" class="button"><big>Log In</big></button>
+            </form>
+        </div>
+
+        <div id="signup" class="form" style="display: none;">
+            <span class="close" onclick="toggleForms()">&times;</span>
+            <form id="signup-form">
+                <h2>Sign Up</h2>
+                <div class="group">
+                    <label class="label">Username</label>
+                    <input type="text" placeholder="Choose a username" class="input" required>
+                </div>
+                <div class="group">
+                    <label class="label">Email</label>
+                    <input type="email" placeholder="Write your email" class="input" required>
+                </div>
+                <div class="group">
+                    <label class="label">Password</label>
+                    <input type="password" placeholder="Enter your password" class="input" required>
+                </div>
+                <div class="toggle-link">Already have an account? <a href="#" onclick="toggleForms()">Log in</a></div>
+                <button type="submit" class="button"><big>Sign Up</big></button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleForms() {
+            const loginForm = document.getElementById('login');
+            const signupForm = document.getElementById('signup');
+            loginForm.style.display = loginForm.style.display === 'none' ? 'block' : 'none';
+            signupForm.style.display = signupForm.style.display === 'none' ? 'block' : 'none';
+        }
+
+        document.getElementById('login-form').onsubmit = function(event) {
+            event.preventDefault();
+            window.location.href = 'EpicCART.html';
+        };
+
+        document.getElementById('signup-form').onsubmit = function(event) {
+            event.preventDefault();
+            window.location.href = 'EpicCART.html';
+        };
+    </script>
+
+</body>
+</html>
